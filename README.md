@@ -1,0 +1,1 @@
+This is a starterd template for [Learn Next.js](https://nextjs.org/learn).
