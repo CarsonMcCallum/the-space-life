@@ -69,104 +69,90 @@ export default function Gallery({ allPostsData }) {
               
             />
 
+      <div className="bottom-shadow"></div>
+
   </div>
 
 
   <div className="gallery-container">
-            <Header as='h2' textAlign='left' inverted color='white'>Gallery</Header>
+            <Header as='h2' textAlign='left' inverted className="gallery-section-label" color='white'>Class Gallery</Header>
             
             <Card.Group itemsPerRow={3}>
-            <Card href='#card-example-link-card'>
-                <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png' wrapped ui={false} />
+
+            
+            <Card raised="true" href='#card-example-link-card' className="gallery-card">
+                <Image src='/images/classthumbnailone.png' wrapped ui={false} />
                 <Card.Content>
-                <Card.Header>Matthew</Card.Header>
+                <Card.Header>Get comfortable with Discomfort</Card.Header>
                 <Card.Meta>
-                    <span className='date'>Joined in 2015</span>
+                    <span className='date'>August 7th</span>
                 </Card.Meta>
                 <Card.Description>
-                    Matthew is a musician living in Nashville.
+                Most people aren't naturally comfortable with discomfort, but this is a skill that can be developed, and during today's experience you we will use the body to train us learn how to develop this skill in our life.
                 </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
                 <a>
-                    <Icon name='user' />
-                    22 Friends
+                    <Icon name='eye' />
+                    204 Views
                 </a>
                 </Card.Content>
             </Card>
+
+
+
+            <Card raised="true" href='#card-example-link-card' className="gallery-card">
+                <Image src='/images/classthumbnailtwo.png' wrapped ui={false} />
+                <Card.Content>
+                <Card.Header>More Faith, Less Fear</Card.Header>
+                <Card.Meta>
+                    <span className='date'>August 1st</span>
+                </Card.Meta>
+                <Card.Description>
+                Together we'll have a chance to explore our relationship with both faith and fear and then we'll learn how to shift ourselves out of fear when we learn it arises in our life. 
+                </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a>
+                    <Icon name='eye' />
+                    398 Views
+                </a>
+                </Card.Content>
+            </Card>
+
+
+
+            <Card raised="true" href='#card-example-link-card' className="gallery-card">
+                <Image src='/images/classthumbnailthree.png' wrapped ui={false} />
+                <Card.Content>
+                <Card.Header>Gratitude</Card.Header>
+                <Card.Meta>
+                    <span className='date'>July 28th</span>
+                </Card.Meta>
+                <Card.Description>
+                Gratitude is a habit that can be developed and the more we practice the more our brain begins looking for things to be grateful for. During today's journey you will be guided to practice experiencing gratitude for your body, your breath, and your life. 
+                </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a>
+                    <Icon name='eye' />
+                    398 Views
+                </a>
+                </Card.Content>
+            </Card>
+
+
+
             </Card.Group>
             
-            <Card.Group className="card-row" itemsPerRow={3}>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </Card.Content>
-                </Card>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                
-                <Card>
-                <Card.Content>
-                <iframe src="https://player.vimeo.com/video/410388339" width="350" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         
-                </Card.Content>
-                </Card>
-                
-                
-            </Card.Group>
+
+
+
+
+
             </div>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+
     </Layout>
   )
 }

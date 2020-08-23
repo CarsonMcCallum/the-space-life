@@ -76,7 +76,7 @@ export default function Layout({ children, home }) {
               <Menu
                 items={[
                   { key: '1', href:'/', name: 'link-1', content: 'Home' },
-                  { key: '2', href:'/Gallery', name: 'link-2', content: 'Gallery' },
+                  { key: '2', href:'/gallery', name: 'link-2', content: 'Gallery' },
                   { key: '2', href:'/login', name: 'link-2', content: 'Log In' },
                 ]}
                 inverted

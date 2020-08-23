@@ -29,12 +29,17 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       
-      <section className={utilStyles.headingMd}>
+  <section className={utilStyles.landingPageHeader}>
       <img
               src="/images/Logo.png"
               className={`${utilStyles.homePageLogo}`}
               
             />
+
+
+      <p>
+          Space is an immersive yoga experience for everyone to enjoy.
+        </p>
 
 <Modal
       basic
@@ -48,7 +53,8 @@ export default function Home({ allPostsData }) {
         background:'white',
         color:'black',
         boxShadow:'purple 1px 1px 26px',
-        border:'none'
+        border:'none',
+        borderRadius:'3px'
       }}>Sign up for early access</Button>}
     >
       <Header icon>
@@ -57,6 +63,7 @@ export default function Home({ allPostsData }) {
       <Modal.Content>
       <Form inverted size='large'>
         <Segment inverted stacked className="login-form">
+          
           <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
         </Segment>
       </Form>
@@ -71,27 +78,41 @@ export default function Home({ allPostsData }) {
       </Modal.Actions>
     </Modal>
 
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <section>
+    <Grid columns='equal' style={{
+      marginTop: '90px',
+      textAlign: 'center'
+    }}>
+      <Grid.Row columns='equal'>
+      <Grid.Column>
+          <p>
+            <span></span>
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            <span>• Great yoga</span>
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            <span>• Awesome music</span>
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            <span>• Immersive visuals</span>
+          </p>
+        </Grid.Column>
+        <Grid.Column>
+          <p>
+            <span></span>
+          </p>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    </section>
     </Layout>
   )
 }
