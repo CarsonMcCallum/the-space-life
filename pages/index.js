@@ -4,6 +4,22 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import {
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  List,
+  Menu,
+  Segment,
+  Sidebar,
+  Visibility,
+  Modal,
+  Form,
+} from 'semantic-ui-react'
 
 export default function Home({ allPostsData }) {
   return (
@@ -11,6 +27,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
