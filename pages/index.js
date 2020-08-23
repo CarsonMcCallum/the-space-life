@@ -22,6 +22,7 @@ import {
 } from 'semantic-ui-react'
 
 export default function Home({ allPostsData }) {
+  const [open, setOpen] = React.useState(false)
   return (
     <Layout home>
       <Head>
@@ -29,7 +30,47 @@ export default function Home({ allPostsData }) {
       </Head>
       
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+      <img
+              src="/images/Logo.png"
+              className={`${utilStyles.homePageLogo}`}
+              
+            />
+
+<Modal
+      basic
+      onClose={() => setOpen(false)}
+      onOpen={() => setOpen(true)}
+      open={open}
+      size='small'
+      trigger={<Button white 
+         style={{
+        marginTop: '4.5em',
+        background:'white',
+        color:'black',
+        boxShadow:'purple 1px 1px 26px',
+        border:'none'
+      }}>Sign up for early access</Button>}
+    >
+      <Header icon>
+        Sign up for early access
+      </Header>
+      <Modal.Content>
+      <Form inverted size='large'>
+        <Segment inverted stacked className="login-form">
+          <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+        </Segment>
+      </Form>
+      </Modal.Content>
+      <Modal.Actions>
+        <Button basic color='gray' inverted onClick={() => setOpen(false)}>
+          <Icon name='remove' className="cancel-icon" />
+        </Button>
+        <Button color='green' inverted onClick={() => setOpen(false)}>
+          <Icon name='checkmark' /> Submit
+        </Button>
+      </Modal.Actions>
+    </Modal>
+
         <p>
           (This is a sample website - you’ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)

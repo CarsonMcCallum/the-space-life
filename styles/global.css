@@ -27,3 +27,57 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.navigation{
+  font-size: 14px !important;
+  margin-top: 4px !important;
+}
+.ui.secondary.inverted.pointing.menu .item{
+  color: gainsboro !important;
+}
+
+header{
+  position: relative;
+  z-index: 10000;
+}
+
+
+.billboard{
+  position: absolute;
+  /* background-color: #000; */
+  width: 100%;
+  height: 56.25vw;
+  z-index: 0;
+  left: 0px;
+  top: 63px;
+}
+
+button.billboard-button{
+  margin-top: 30px !important;
+  background: white !important;
+  color: black !important;
+}
+button.billboard-button i{
+  margin-left: 10px !important;
+}
+
+.gallery-container{
+  margin-top: 32.25vw;
+}
+
+.billboard-image{
+  position: absolute;
+    top: -140px;
+    z-index: -1;
+}
+
+h2.ui.billboard-second-header{
+  margin-top: 1.2em;
+  color: #a0a0a0;
+  color: #fff;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  font-size: 1.4vw;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.45);
+}

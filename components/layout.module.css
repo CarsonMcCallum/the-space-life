@@ -1,24 +1,38 @@
 .container {
-    max-width: 36rem;
+  
     padding: 0 1rem;
-    margin: 3rem auto 6rem;
+    margin: auto;
+    width: 92%;
   }
   
+  @media (min-width: 1200px){
+  .container{
+   
+  }
+  }
   .header {
+    /*
     display: flex;
     flex-direction: column;
     align-items: center;
+    */
+   
   }
+
   
-  .headerImage {
+  .headerImage{
   
   }
   
   .headerHomeImage {
-    width: auto;
-    height: 8rem;
+    width: 120px;
+    margin-top: 7px;
   }
   
   .backToHome {
     margin: 3rem 0 0;
+  }
+
+  .navigation{
+    font-size: 14px !important;
   }
