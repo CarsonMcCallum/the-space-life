@@ -141,13 +141,41 @@ export default function Gallery({ allPostsData }) {
                 </Card.Content>
             </Card>
 
-
+            {allPostsData.map(({ id, date, title, header,imagesrc,description }) => (
+            <Card raised="true" href={`/posts/${id}`}  className="gallery-card">
+                <Image src={imagesrc} wrapped ui={false} />
+                <Card.Content>
+                <Card.Header>{header}</Card.Header>
+                <Card.Meta>
+                    <span className='date'>{date}</span>
+                </Card.Meta>
+                <Card.Description>
+                 </Card.Description>
+                </Card.Content>
+                <Card.Content extra>
+                <a>
+                    <Icon name='eye' />
+                    398 Views
+                </a>
+                </Card.Content>
+            </Card>
+       ))}
 
             </Card.Group>
             
-
-
-
+            {/*
+            {allPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+            */}
 
 
             </div>

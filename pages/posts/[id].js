@@ -9,8 +9,11 @@ export default function Post({ postData }) {
       <Layout>
         <Head>
           <title>{postData.title}</title>
+          
         </Head>
         <article>
+
+          <div>{postData.vimeoid}</div>
           <h1 className={utilStyles.headingXl}>{postData.title}</h1>
           <div className={utilStyles.lightText}>
             <Date dateString={postData.date} />
